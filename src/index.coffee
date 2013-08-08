@@ -1,5 +1,7 @@
+colors = require 'colors'
 fs = require 'fs'
 needle = require 'needle'
+{print} = require 'util'
 program = require 'commander'
 pjson = require "#{__dirname}/../package.json"
 unzip = require 'unzip'
@@ -32,7 +34,10 @@ fontello = ->
           needle.get("#{host}/#{sessionId}/get", (error, response, body) ->
             throw error if error
           )
-          .pipe unzip.Extract({ path: '.' })
+          .pipe(unzip.Extract({ path: '.' }))
+          .on('finish', (->
+            print "Download complete.\n".green
+          ))
 
 
   program.parse(process.argv)
