@@ -1,0 +1,29 @@
+{
+  "name": "fontello-cli",
+  "description": "Command line interface for Fontello.",
+  "url": "https://github.com/paulyoung/fontello-cli",
+  "keywords": [
+    "fontello",
+    "font",
+    "icon"
+  ],
+  "version": "0.0.1",
+  "bin": {
+    "fontello": "./bin/fontello"
+  },
+  "main": "./lib/index",
+  "engines": {
+    "node": ">=0.10.x"
+  },
+  "dependencies": {
+    "commander": "2.0.0",
+    "needle": "0.5.8",
+    "unzip": "0.1.8"
+  },
+  "devDependencies": {
+    "coffee-script": "1.6.3"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/cake build"
+  }
+}
