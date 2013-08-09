@@ -2,7 +2,7 @@
 
 ## Installation
 ```sh
-$ npm install -g fontello-cli
+$ npm install -g fontello
 ```
 
 ## Usage
