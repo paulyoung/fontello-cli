@@ -26,5 +26,9 @@
   },
   "scripts": {
     "build": "./node_modules/.bin/cake build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulyoung/fontello-cli.git"
   }
 }
