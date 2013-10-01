@@ -6,7 +6,7 @@ path = require 'path'
 program = require 'commander'
 pjson = require "#{__dirname}/../package.json"
 unzip = require 'unzip'
-
+mkdirp = require 'mkdirp'
 
 dirIsValid = (path) ->
   try
@@ -15,7 +15,7 @@ dirIsValid = (path) ->
     else
       return false
   catch e
-    fs.mkdirSync path
+    mkdirp path
     return true
 
 fontello = ->
