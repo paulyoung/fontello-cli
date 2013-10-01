@@ -19,7 +19,8 @@
     "colors": "0.6.1",
     "commander": "2.0.0",
     "needle": "0.5.8",
-    "unzip": "0.1.8"
+    "unzip": "0.1.8",
+    "mkdirp": "~0.3.5"
   },
   "devDependencies": {
     "coffee-script": "1.6.3"
