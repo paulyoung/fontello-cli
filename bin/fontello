@@ -1,2 +1,58 @@
 #!/usr/bin/env node
-require('../lib/index')();
+var colors = require('colors');
+var fs = require('fs');
+var pjson = require(__dirname + '/../package.json');
+var program = require('commander');
+
+var fontello = require('../lib/index');
+
+var dirIsValid = function(path) {
+  try {
+    if (fs.statSync(path).isDirectory())
+      return true;
+    else {
+      return false;
+    }
+  } catch (e) {
+    fs.mkdirSync(path);
+    return true
+  }
+};
+
+program
+  .version(pjson.version)
+  .usage('install')
+  .option('--config [path]', 'path to fontello config. defaults to ./config')
+  .option('--css [path]', 'path to css directory (optional). if provided, --font option is expected.')
+  .option('--font [path]', 'path to font directory (optional). if provided, --css option is expected.');
+
+program
+  .command('install')
+  .description('download fontello. without --css and --font flags, the full download is extracted.')
+  .action(function(env, options) {
+
+    // Check if css and font directories were provided.
+    // Create them if they do not exist.
+    // Exit if they are not valid directories.
+    //
+    if (program.css && program.font) {
+      if (!dirIsValid(program.css)) {
+        print('--css path provided is not a directory.\n'.red);
+        process.exit(1);
+      }
+
+      if (!dirIsValid(program.font)) {
+        print('--font path provided is not a directory.\n'.red);
+        process.exit(1);
+      }
+    }
+
+    fontello.install({
+      config: program.config || 'config.json',
+      css: program.css,
+      font: program.font
+    });
+
+  });
+
+program.parse(process.argv);
