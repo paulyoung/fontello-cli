@@ -7,11 +7,11 @@
     "font",
     "icon"
   ],
-  "version": "0.2.0",
+  "version": "0.2.1",
   "bin": {
     "fontello": "./bin/fontello"
   },
-  "main": "./lib/index",
+  "main": "./lib/fontello",
   "engines": {
     "node": ">=0.10.x"
   },
