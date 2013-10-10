@@ -7,7 +7,7 @@
     "font",
     "icon"
   ],
-  "version": "0.1.0",
+  "version": "0.2.0",
   "bin": {
     "fontello": "./bin/fontello"
   },
@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "colors": "0.6.1",
+    "open": "0.0.4",
     "commander": "2.0.0",
     "needle": "0.5.8",
     "unzip": "0.1.8"

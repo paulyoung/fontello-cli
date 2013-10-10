@@ -19,9 +19,11 @@ var dirIsValid = function(path) {
   }
 };
 
+var config = 'config.json';
+
 program
   .version(pjson.version)
-  .usage('install')
+  .usage('[command] [options]')
   .option('--config [path]', 'path to fontello config. defaults to ./config')
   .option('--css [path]', 'path to css directory (optional). if provided, --font option is expected.')
   .option('--font [path]', 'path to font directory (optional). if provided, --css option is expected.');
@@ -48,11 +50,20 @@ program
     }
 
     fontello.install({
-      config: program.config || 'config.json',
+      config: program.config || config,
       css: program.css,
       font: program.font
     });
 
+  });
+
+program
+  .command('open')
+  .description('open the fontello website with your config file preloaded.')
+  .action(function(env, options) {
+    fontello.open({
+      config: program.config || config
+    });
   });
 
 program.parse(process.argv);
