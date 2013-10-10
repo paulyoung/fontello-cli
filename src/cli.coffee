@@ -5,7 +5,7 @@ path = require 'path'
 pjson = require path.join(__dirname, '..', 'package.json')
 program = require 'commander'
 
-fontello = require '../lib/fontello'
+fontello = require path.join(__dirname, '..', 'lib', 'fontello')
 
 
 dirIsValid = (path) ->
