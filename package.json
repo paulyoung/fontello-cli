@@ -7,7 +7,7 @@
     "font",
     "icon"
   ],
-  "version": "0.2.1",
+  "version": "0.2.2",
   "bin": {
     "fontello": "./bin/fontello"
   },
@@ -20,6 +20,7 @@
     "open": "0.0.4",
     "commander": "2.0.0",
     "needle": "0.5.8",
+    "mkdirp": "0.3.5",
     "unzip": "0.1.8"
   },
   "devDependencies": {

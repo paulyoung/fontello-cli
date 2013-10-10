@@ -1,8 +1,10 @@
 colors = require 'colors'
 fs = require 'fs'
+mkdirp = require 'mkdirp'
 path = require 'path'
 pjson = require path.join(__dirname, '..', 'package.json')
 program = require 'commander'
+
 fontello = require '../lib/fontello'
 
 
@@ -10,7 +12,7 @@ dirIsValid = (path) ->
   try
     return false unless fs.statSync(path).isDirectory()
   catch e
-    fs.mkdirSync path
+    mkdirp.sync path
     return true
 
 
