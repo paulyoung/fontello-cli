@@ -10,7 +10,7 @@ fontello = require path.join(__dirname, '..', 'lib', 'fontello')
 
 dirIsValid = (path) ->
   try
-    return false unless fs.statSync(path).isDirectory()
+    return fs.statSync(path).isDirectory()
   catch e
     mkdirp.sync path
     return true
