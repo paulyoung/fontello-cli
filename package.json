@@ -1,15 +1,16 @@
 {
-  "name": "fontello",
+  "name": "fontello-cli",
   "description": "Command line interface for Fontello.",
   "url": "https://github.com/paulyoung/fontello-cli",
   "keywords": [
+    "cli",
     "fontello",
     "font",
     "icon"
   ],
   "version": "0.2.3",
   "bin": {
-    "fontello": "./bin/fontello"
+    "fontello-cli": "./bin/fontello-cli"
   },
   "main": "./lib/fontello",
   "engines": {
