@@ -9,3 +9,8 @@ $ npm install -g fontello-cli
 ```
 $ fontello-cli --help
 ```
+
+## Development
+```
+$ npm run-script build
+```
