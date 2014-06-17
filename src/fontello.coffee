@@ -15,7 +15,7 @@ apiRequest = (options, successCallback, errorCallback) ->
       file: options.config
       content_type: 'application/json'
 
-  if options.host is undefined
+  if options.host is null
     options.host = HOST
 
   needle.post options.host, data, { multipart: true }, (error, response, body) ->
@@ -76,7 +76,7 @@ fontello =
 
   open: (options) ->
     apiRequest options, (sessionId) ->
-      if options.host is undefined
+      if options.host is null
         options.host = HOST
       open "#{options.host}/#{sessionId}"
 
