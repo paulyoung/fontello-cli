@@ -15,7 +15,10 @@ apiRequest = (options, successCallback, errorCallback) ->
       file: options.config
       content_type: 'application/json'
 
-  needle.post HOST, data, { multipart: true }, (error, response, body) ->
+  if options.host is null
+    options.host = HOST
+
+  needle.post options.host, data, { multipart: true }, (error, response, body) ->
     throw error if error
     sessionId = body
 
@@ -73,7 +76,9 @@ fontello =
 
   open: (options) ->
     apiRequest options, (sessionId) ->
-      open "#{HOST}/#{sessionId}"
+      if options.host is null
+        options.host = HOST
+      open "#{options.host}/#{sessionId}"
 
 
 module.exports = fontello
