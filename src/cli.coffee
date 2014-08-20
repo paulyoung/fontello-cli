@@ -25,7 +25,7 @@ program
   .option('--config [path]', 'path to fontello config. defaults to ./config')
   .option('--css [path]', 'path to css directory (optional). if provided, --font option is expected.')
   .option('--font [path]', 'path to font directory (optional). if provided, --css option is expected.')
-  .option('--host [host]', 'address to fontello instance (optional).')
+  .option('--host [host]', 'address of fontello instance (optional).')
 
 program
   .command('install')
