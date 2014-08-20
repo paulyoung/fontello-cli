@@ -10,20 +10,20 @@ HOST = 'http://fontello.com'
 
 
 apiRequest = (options, successCallback, errorCallback) ->
+  options.host ?= HOST
+
   data =
     config:
       file: options.config
       content_type: 'application/json'
-
-  if options.host is null
-    options.host = HOST
 
   needle.post options.host, data, { multipart: true }, (error, response, body) ->
     throw error if error
     sessionId = body
 
     if response.statusCode is 200
-      successCallback? sessionId
+      sessionUrl = "#{options.host}/#{sessionId}"
+      successCallback? sessionUrl
     else
       errorCallback? response
 
@@ -34,8 +34,8 @@ fontello =
 
     # Begin the download
     #
-    apiRequest options, (sessionId) ->
-      zipFile = needle.get("#{HOST}/#{sessionId}/get", (error, response, body) ->
+    apiRequest options, (sessionUrl) ->
+      zipFile = needle.get("#{sessionUrl}/get", (error, response, body) ->
         throw error if error
       )
 
@@ -75,10 +75,8 @@ fontello =
 
 
   open: (options) ->
-    apiRequest options, (sessionId) ->
-      if options.host is null
-        options.host = HOST
-      open "#{options.host}/#{sessionId}"
+    apiRequest options, (sessionUrl) ->
+      open sessionUrl
 
 
 module.exports = fontello

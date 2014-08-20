@@ -48,7 +48,7 @@ program
       config: program.config or config
       css: program.css
       font: program.font
-      host: program.host or null
+      host: program.host
 
 
 program
@@ -57,7 +57,7 @@ program
   .action (env, options) ->
     fontello.open
       config: program.config or config
-      host: program.host or null
+      host: program.host
 
 
 program.parse process.argv
