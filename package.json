@@ -8,7 +8,7 @@
     "font",
     "icon"
   ],
-  "version": "0.3.0",
+  "version": "0.3.1",
   "bin": {
     "fontello-cli": "./bin/fontello-cli"
   },
