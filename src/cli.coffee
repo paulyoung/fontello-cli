@@ -26,6 +26,7 @@ program
   .option('--css [path]', 'path to css directory (optional). if provided, --font option is expected.')
   .option('--font [path]', 'path to font directory (optional). if provided, --css option is expected.')
   .option('--host [host]', 'address of fontello instance (optional).')
+  .option('--proxy [host]', 'adress of the proxy you are behind.')
 
 program
   .command('install')
@@ -49,6 +50,7 @@ program
       css: program.css
       font: program.font
       host: program.host
+      proxy: program.proxy
 
 
 program
@@ -58,6 +60,7 @@ program
     fontello.open
       config: program.config or config
       host: program.host
+      proxy: program.proxy
 
 
 program.parse process.argv

@@ -12,12 +12,18 @@ HOST = 'http://fontello.com'
 apiRequest = (options, successCallback, errorCallback) ->
   options.host ?= HOST
 
+  requestOption =
+    multipart: true
+
+  if options.proxy
+    requestOption.proxy = options.proxy
+
   data =
     config:
       file: options.config
       content_type: 'application/json'
 
-  needle.post options.host, data, { multipart: true }, (error, response, body) ->
+  needle.post options.host, data, requestOption, (error, response, body) ->
     throw error if error
     sessionId = body
 
@@ -35,7 +41,13 @@ fontello =
     # Begin the download
     #
     apiRequest options, (sessionUrl) ->
-      zipFile = needle.get("#{sessionUrl}/get", (error, response, body) ->
+
+      requestOptions = {}
+
+      if options.proxy
+        requestOptions.proxy = options.proxy
+
+      zipFile = needle.get("#{sessionUrl}/get", requestOptions, (error, response, body) ->
         throw error if error
       )
 
