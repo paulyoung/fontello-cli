@@ -13,7 +13,7 @@ dirIsValid = (path) ->
     return fs.statSync(path).isDirectory()
   catch e
     mkdirp.sync path
-    return true
+  return true
 
 
 config = 'config.json'
@@ -38,11 +38,11 @@ program
     #
     if program.css and program.font
       unless dirIsValid program.css
-        print '--css path provided is not a directory.\n'.red
+        console.log '--css path provided is not a directory.\n'.red
         process.exit 1
 
       unless dirIsValid program.font
-        print '--font path provided is not a directory.\n'.red
+        console.log '--font path provided is not a directory.\n'.red
         process.exit 1
 
     fontello.install
