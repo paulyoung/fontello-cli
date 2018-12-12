@@ -22,7 +22,7 @@
     "commander": "2.0.0",
     "needle": "0.5.8",
     "mkdirp": "0.3.5",
-    "unzip": "0.1.8"
+    "unzipper": "0.9.4"
   },
   "devDependencies": {
     "coffee-script": "1.6.3"
