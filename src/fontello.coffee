@@ -3,7 +3,7 @@ needle = require 'needle'
 open = require 'open'
 {print} = require 'util'
 path = require 'path'
-unzip = require 'unzip'
+unzip = require 'unzipper'
 
 
 HOST = 'http://fontello.com'
