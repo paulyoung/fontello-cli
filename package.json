@@ -14,7 +14,7 @@
   },
   "main": "./lib/fontello",
   "engines": {
-    "node": ">=0.10.x"
+    "node": ">=8"
   },
   "dependencies": {
     "colors": "^1.4.0",
@@ -28,7 +28,7 @@
     "coffeescript": "^1.12.7"
   },
   "scripts": {
-    "build": "./node_modules/.bin/cake build"
+    "build": "cake build"
   },
   "repository": {
     "type": "git",
