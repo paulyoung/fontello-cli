@@ -1,9 +1,10 @@
 fs = require 'fs'
 needle = require 'needle'
 open = require 'open'
-{print} = require 'util'
 path = require 'path'
+process = require 'process'
 unzip = require 'unzipper'
+{print} = require 'util'
 
 
 HOST = 'http://fontello.com'
@@ -76,7 +77,7 @@ fontello =
 
       else
         zipFile
-          .pipe(unzip.Extract({ path: '.' }))
+          .pipe(unzip.Extract({ path: process.cwd() }))
           .on('finish', (->
             print 'Install complete.\n'.green
           ))
