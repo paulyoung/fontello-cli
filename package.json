@@ -14,21 +14,21 @@
   },
   "main": "./lib/fontello",
   "engines": {
-    "node": ">=0.10.x"
+    "node": ">=8"
   },
   "dependencies": {
-    "colors": "0.6.1",
-    "open": "^6.4.0",
-    "commander": "2.0.0",
-    "needle": "0.5.8",
-    "mkdirp": "0.3.5",
-    "unzipper": "0.10.5"
+    "colors": "^1.4.0",
+    "open": "^7.0.0",
+    "commander": "^3.0.0",
+    "needle": "^2.4.0",
+    "mkdirp": "^0.5.1",
+    "unzipper": "^0.10.5"
   },
   "devDependencies": {
-    "coffee-script": "1.6.3"
+    "coffeescript": "^1.12.7"
   },
   "scripts": {
-    "build": "./node_modules/.bin/cake build"
+    "build": "cake build"
   },
   "repository": {
     "type": "git",

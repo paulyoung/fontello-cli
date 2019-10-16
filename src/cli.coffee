@@ -4,7 +4,6 @@ mkdirp = require 'mkdirp'
 path = require 'path'
 pjson = require path.join(__dirname, '..', 'package.json')
 program = require 'commander'
-{print} = require 'util'
 fontello = require path.join(__dirname, '..', 'lib', 'fontello')
 
 
@@ -38,11 +37,11 @@ program
     #
     if program.css and program.font
       unless dirIsValid program.css
-        print '--css path provided is not a directory.\n'.red
+        console.error '--css path provided is not a directory.\n'.red
         process.exit 1
 
       unless dirIsValid program.font
-        print '--font path provided is not a directory.\n'.red
+        console.error '--font path provided is not a directory.\n'.red
         process.exit 1
 
     fontello.install
