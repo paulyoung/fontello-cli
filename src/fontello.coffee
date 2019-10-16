@@ -4,7 +4,6 @@ open = require 'open'
 path = require 'path'
 process = require 'process'
 unzip = require 'unzipper'
-{print} = require 'util'
 
 
 HOST = 'http://fontello.com'
@@ -72,14 +71,14 @@ fontello =
                   entry.autodrain()
           ))
           .on('finish', (->
-            print 'Install complete.\n'.green
+            console.log 'Install complete.\n'.green
           ))
 
       else
         zipFile
           .pipe(unzip.Extract({ path: process.cwd() }))
           .on('finish', (->
-            print 'Install complete.\n'.green
+            console.log 'Install complete.\n'.green
           ))
 
 
