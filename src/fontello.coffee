@@ -44,6 +44,7 @@ fontello =
 
       zipFile = needle.get("#{sessionUrl}/get", requestOptions, (error, response, body) ->
         throw error if error
+        throw "Failed. Response Code [${response.statusCode}] from ${sessionUrl}/get" if (response.statusCode != 200)
       )
 
       # If css and font directories were provided, extract the contents of
