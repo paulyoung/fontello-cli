@@ -12,15 +12,18 @@
 **Closed issues:**
 
 - Vulnerabilities found \(1 high, 1 critical\) [\#34](https://github.com/paulyoung/fontello-cli/issues/34)
+- Problem downloading fonts [\#28](https://github.com/paulyoung/fontello-cli/issues/28)
 - Not backward compatible. [\#26](https://github.com/paulyoung/fontello-cli/issues/26)
 - Add a proxy option [\#23](https://github.com/paulyoung/fontello-cli/issues/23)
 - unwanted output [\#22](https://github.com/paulyoung/fontello-cli/issues/22)
 
 **Merged pull requests:**
 
+- Add a changelog [\#38](https://github.com/paulyoung/fontello-cli/pull/38) ([dlackty](https://github.com/dlackty))
 - Modernize the project [\#37](https://github.com/paulyoung/fontello-cli/pull/37) ([dlackty](https://github.com/dlackty))
 - Add basic CI with Github Actions [\#36](https://github.com/paulyoung/fontello-cli/pull/36) ([dlackty](https://github.com/dlackty))
 - Fix vulnerabilities [\#35](https://github.com/paulyoung/fontello-cli/pull/35) ([kayvanbree](https://github.com/kayvanbree))
+- Follow keep alive requests on install [\#29](https://github.com/paulyoung/fontello-cli/pull/29) ([jbeezley](https://github.com/jbeezley))
 
 ## [v0.4.0](https://github.com/paulyoung/fontello-cli/tree/v0.4.0) (2015-07-01)
 [Full Changelog](https://github.com/paulyoung/fontello-cli/compare/v0.3.1...v0.4.0)

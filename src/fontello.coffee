@@ -39,7 +39,7 @@ fontello =
     #
     apiRequest options, (sessionUrl) ->
 
-      requestOptions = {}
+      requestOptions = { follow: 10 }
       requestOptions.proxy = options.proxy if options.proxy?
 
       zipFile = needle.get("#{sessionUrl}/get", requestOptions, (error, response, body) ->
