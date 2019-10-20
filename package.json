@@ -28,7 +28,7 @@
     "coffeescript": "^1.12.7"
   },
   "scripts": {
-    "build": "cake build"
+    "build": "coffee -c -o lib src"
   },
   "repository": {
     "type": "git",
