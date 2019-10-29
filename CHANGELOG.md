@@ -1,8 +1,7 @@
 # Change Log
 
-## [Unreleased](https://github.com/paulyoung/fontello-cli/tree/HEAD)
-
-[Full Changelog](https://github.com/paulyoung/fontello-cli/compare/v0.4.0...HEAD)
+## [v0.5.0](https://github.com/paulyoung/fontello-cli/tree/v0.5.0) (2019-10-30)
+[Full Changelog](https://github.com/paulyoung/fontello-cli/compare/v0.4.0...v0.5.0)
 
 **Implemented enhancements:**
 
