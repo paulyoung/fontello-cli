@@ -6,7 +6,7 @@ process = require 'process'
 unzip = require 'unzipper'
 
 
-HOST = 'http://fontello.com'
+HOST = 'https://fontello.com'
 
 
 apiRequest = (options, successCallback, errorCallback) ->
