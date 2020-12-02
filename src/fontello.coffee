@@ -9,7 +9,7 @@ unzip = require 'unzipper'
 HOST = 'https://fontello.com'
 
 getSession = (options, requestOptions, successCallback, errorCallback) ->
-  print 'Creating a new session'.green;
+  console.log 'Creating a new session'.green;
   data =
     config:
       file: options.config
@@ -22,9 +22,9 @@ getSession = (options, requestOptions, successCallback, errorCallback) ->
     if response.statusCode is 200
       fs.writeFile '.fontello-session', sessionId, (err) ->
           if not err
-            print 'Session was saved as .fontello-session \n'.green;
+            console.log 'Session was saved as .fontello-session \n'.green;
           else
-            print err + "\n";
+            console.error err + "\n";
       sessionUrl = "#{options.host}/#{sessionId}"
       successCallback? sessionUrl
     else
@@ -39,16 +39,16 @@ apiRequest = (options, successCallback, errorCallback) ->
     stats = fs.statSync(".fontello-session")
 
     timeDiff = Math.abs(new Date().getTime() - stats.mtime.getTime());
-    
+
     if timeDiff < (1000 * 3600 * 24)
-      print 'Using .fontello-session'.green
+      console.log 'Using .fontello-session'.green
       sessionId = fs.readFileSync('.fontello-session');
       sessionUrl = "#{options.host}/#{sessionId}"
       return successCallback? sessionUrl
-    
-  
+
+
   getSession(options, requestOptions, successCallback, errorCallback)
-  
+
 
 
 fontello =
