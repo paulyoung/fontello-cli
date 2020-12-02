@@ -25,7 +25,7 @@
     "unzipper": "^0.10.5"
   },
   "devDependencies": {
-    "coffeescript": "^1.12.7"
+    "coffeescript": "^2.5.1"
   },
   "scripts": {
     "build": "coffee -c -o lib src"
