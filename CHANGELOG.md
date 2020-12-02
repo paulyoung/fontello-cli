@@ -1,6 +1,14 @@
 # Changelog
 
-## [v0.6.0](https://github.com/paulyoung/fontello-cli/tree/v0.6.0) (2020-12-03)
+## [v0.6.1](https://github.com/paulyoung/fontello-cli/tree/v0.6.1) (2020-12-03)
+
+[Full Changelog](https://github.com/paulyoung/fontello-cli/compare/v0.6.0...v0.6.1)
+
+**Merged pull requests:**
+
+- Migrate to latest coffeescript version [\#44](https://github.com/paulyoung/fontello-cli/pull/44) ([dlackty](https://github.com/dlackty))
+
+## [v0.6.0](https://github.com/paulyoung/fontello-cli/tree/v0.6.0) (2020-12-02)
 
 [Full Changelog](https://github.com/paulyoung/fontello-cli/compare/v0.5.1...v0.6.0)
 
