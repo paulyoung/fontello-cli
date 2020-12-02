@@ -1,6 +1,21 @@
 # Changelog
 
-## [v0.5.1](https://github.com/paulyoung/fontello-cli/tree/v0.5.1) (2020-10-20)
+## [v0.6.0](https://github.com/paulyoung/fontello-cli/tree/v0.6.0) (2020-12-03)
+
+[Full Changelog](https://github.com/paulyoung/fontello-cli/compare/v0.5.1...v0.6.0)
+
+**Closed issues:**
+
+- error while running under windows/wsl [\#42](https://github.com/paulyoung/fontello-cli/issues/42)
+- Upgrade npm version [\#41](https://github.com/paulyoung/fontello-cli/issues/41)
+- fontello-cli won't fetch updates after saving session in browser [\#16](https://github.com/paulyoung/fontello-cli/issues/16)
+
+**Merged pull requests:**
+
+- Logging session url for manual browsing [\#43](https://github.com/paulyoung/fontello-cli/pull/43) ([syffs](https://github.com/syffs))
+- Solve Issues \#16 [\#31](https://github.com/paulyoung/fontello-cli/pull/31) ([AliLozano](https://github.com/AliLozano))
+
+## [v0.5.1](https://github.com/paulyoung/fontello-cli/tree/v0.5.1) (2020-10-19)
 
 [Full Changelog](https://github.com/paulyoung/fontello-cli/compare/v0.5.0...v0.5.1)
 
