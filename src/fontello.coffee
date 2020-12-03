@@ -103,7 +103,7 @@ fontello =
 
   open: (options) ->
     apiRequest options, ((sessionUrl) ->
-      console.log 'Your browser should open itself, otherwise you can open the following URL manually: ${sessionUrl}\n'.green
+      console.log "Your browser should open itself, otherwise you can open the following URL manually: #{sessionUrl}\n".green
       open sessionUrl
     )
 
