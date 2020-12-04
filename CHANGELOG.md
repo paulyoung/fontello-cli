@@ -1,6 +1,14 @@
 # Changelog
 
-## [v0.6.1](https://github.com/paulyoung/fontello-cli/tree/v0.6.1) (2020-12-03)
+## [v0.6.2](https://github.com/paulyoung/fontello-cli/tree/v0.6.2) (2020-12-05)
+
+[Full Changelog](https://github.com/paulyoung/fontello-cli/compare/v0.6.1...v0.6.2)
+
+**Merged pull requests:**
+
+- fix: session-url [\#45](https://github.com/paulyoung/fontello-cli/pull/45) ([syffs](https://github.com/syffs))
+
+## [v0.6.1](https://github.com/paulyoung/fontello-cli/tree/v0.6.1) (2020-12-02)
 
 [Full Changelog](https://github.com/paulyoung/fontello-cli/compare/v0.6.0...v0.6.1)
 
