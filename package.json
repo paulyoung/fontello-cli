@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "colors": "^1.4.0",
-    "open": "^7.0.0",
+    "open": "^8.4.0",
     "commander": "^3.0.0",
     "needle": "^3.0.0",
     "mkdirp": "^1.0.4",
