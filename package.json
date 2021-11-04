@@ -14,7 +14,7 @@
   },
   "main": "./lib/fontello",
   "engines": {
-    "node": ">=8"
+    "node": ">=12"
   },
   "dependencies": {
     "colors": "^1.4.0",
