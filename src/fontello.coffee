@@ -79,6 +79,9 @@ fontello =
               dirName = path.dirname(pathName).match(/\/([^\/]*)$/)?[1]
               fileName = path.basename pathName
 
+              if fileName is "config.json"
+                return entry.pipe(fs.createWriteStream(options.config))
+
               switch dirName
                 when 'css'
                   cssPath = path.join options.css, fileName
